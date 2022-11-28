@@ -15,10 +15,7 @@ int main(void)
 {
     char *buffer;
 
-    buffer = malloc(sizeof(char) * 33);
-    if (!buffer) {
-        return -1;
-    }
-    reverse(size_read(buffer));
+    buffer = (char*)malloc(sizeof(char) * 1024);
+    rev_in_order(size_read(buffer));
     free(buffer);
 }

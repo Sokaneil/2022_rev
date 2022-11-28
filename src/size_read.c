@@ -7,12 +7,16 @@
  */
 
 #include <unistd.h>
+#include "rev.h"
 
 char *size_read(char *buffer)
 {
     int size_read;
 
-    size_read = read(0, buffer, 33);
+    if (!buffer) {
+        return 0;
+    }
+    size_read = read(0, buffer, 1023);
     if (size_read == -1) {
         return "error";
     }

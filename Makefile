@@ -8,14 +8,17 @@ NAME	=	rev
 
 SRCS	=	src/main.c		\
 		src/reverse.c		\
+		src/rev_in_order.c	\
 		src/strlen.c 		\
-		src/size_read.c		
+		src/size_read.c		\
+		src/strcmp.c		\
+		src/strchr.c
 
 OBJS	=	$(SRCS:.c=.o)
 
 CFLAGS	+=	-W -Wall -Wextra -Werror -Iinclude/
 
-LDFLAGS	+=	-llapin -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system -lstdc++ -lm
+LDFLAGS	+=
 
 RM	=	rm -vf
 

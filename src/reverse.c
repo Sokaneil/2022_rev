@@ -14,22 +14,19 @@ char *reverse(char *str)
 {
     int i;
     int j;
-    int k;
-    int l;
-    char tmp;
+    char buf;
 
-    i = stu_strlen(str);
-    j = 0;
-    k = i - 2;
-    l = j;
-    while (l < k) {
-        tmp = str[l];
-        str[l] = str[k];
-        str[k] = tmp;
-        k -= 1;
-        l += 1;
+    i = 0;
+    j = stu_strlen(str) - 1;
+    while(i < j) {
+        buf = str[i];
+        str[i] = str[j];
+        str[j] = buf;
+        i += 1;
+        j -= 1;
     }
     write(1, str, stu_strlen(str));
+    write(1, "\n", 1);
     str[i] = '\n';
     return 0;
 }

@@ -12,5 +12,8 @@
 unsigned int stu_strlen(const char *str);
 char *size_read(char *buffer);
 char *reverse(char *str);
+char *rev_in_order(char *str);
+int stu_strcmp(const char *s1, const char *s2);
+int stu_strchr(const char *str, char search);
 
 #endif
