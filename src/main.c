@@ -13,9 +13,9 @@
 
 int main(void)
 {
-    char *buffer;
+    struct read m_read;
 
-    buffer = (char*)malloc(sizeof(char) * 1024);
-    rev_in_order(size_read(buffer));
-    free(buffer);
+    mem_read(&m_read);
+    rev_in_order(&m_read);
+    free(m_read.tmp);
 }

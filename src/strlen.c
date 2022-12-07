@@ -8,11 +8,11 @@
 
 unsigned int stu_strlen(const char *str)
 {
-    unsigned int i = 0;
+    unsigned int i;
 
-    while (*str != '\0') {
+    i = 0;
+    while (str[i] != '\0') {
         i = i + 1;
-        str = str + 1;
     }
     return i;
 }

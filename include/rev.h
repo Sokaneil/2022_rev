@@ -8,12 +8,14 @@
 
 #ifndef REV_H_
 #define REV_H_
+#include "read.h"
 
 unsigned int stu_strlen(const char *str);
-char *size_read(char *buffer);
-char *reverse(char *str);
-char *rev_in_order(char *str);
-int stu_strcmp(const char *s1, const char *s2);
-int stu_strchr(const char *str, char search);
+char *mem_read(struct read *m_read);
+int *reverse(char *str);
+int *rev_in_order(struct read *m_read);
+char *stu_strcpy(char *dest, const char *src);
+char *stu_strdup(const char *src);
+char *stu_strcat(char *dest, const char *src);
 
 #endif

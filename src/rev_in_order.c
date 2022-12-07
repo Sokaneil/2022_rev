@@ -10,26 +10,25 @@
 #include <stdlib.h>
 #include "rev.h"
 
-char *rev_in_order(char *str)
+int *rev_in_order(struct read *m_read)
 {
     int i;
     int j;
-    char *str1;
+    char *str;
 
     i = 0;
-    j = 0;
-    str1 = malloc(sizeof(char) * stu_strlen(str));
-    while (str[i + 1] != '\0') {
-        while (str[i] != '\n') {
-            str1[j] = str[i];
+    str = malloc(sizeof(char) * stu_strlen(m_read->tmp));
+    while (m_read->tmp[i] != '\0') {
+        j = 0;
+        while (m_read->tmp[i] != '\n' && m_read->tmp[i] != '\0') {
+            str[j] = m_read->tmp[i];
             i += 1;
             j += 1;
         }
-        str1[j] = '\0';
-        reverse(str1);
+        str[j] = '\0';
+        reverse(str);
         i += 1;
-        j = 0;
     }
-    free(str1);
+    free(str);
     return (0);
 }

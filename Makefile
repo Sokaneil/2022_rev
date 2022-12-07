@@ -10,9 +10,10 @@ SRCS	=	src/main.c		\
 		src/reverse.c		\
 		src/rev_in_order.c	\
 		src/strlen.c 		\
-		src/size_read.c		\
-		src/strcmp.c		\
-		src/strchr.c
+		src/mem_read.c		\
+		src/strcpy.c		\
+		src/strdup.c 		\
+		src/strcat.c
 
 OBJS	=	$(SRCS:.c=.o)
 
